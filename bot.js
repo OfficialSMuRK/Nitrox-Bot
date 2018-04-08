@@ -12,11 +12,11 @@ client.on('message', message => {
 });
 
 client.on("guildCreate", (guild) => {
-    console.log(client.user + " was invited to and joined " + guild.name);
+    console.log(client.user.username + " was invited to and joined " + guild.name);
 });
 
 client.on("guildMemberAdd", (guild, member) => {
-    console.log(member.user.username + " joined " + guild.name);
+    console.log(member.user + " joined " + guild.name);
 });
 
 client.on('guildMemberRemove', member => {
