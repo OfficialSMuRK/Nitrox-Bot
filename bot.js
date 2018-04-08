@@ -5,6 +5,12 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
+
 client.on('guildDelete', guild=> {
     console.log(`I have left ${guild.name}`);
     
@@ -34,9 +40,12 @@ client.on('message', message => {
     
 client.on("guildMemberAdd", (member) => {
   newUsers.set(member.id, member.user);
+    
 });
+
 client.on("guildMemberRemove", (member) => {
   if(newUsers.has(member.id)) newUsers.delete(member.id);
+    
 });
     
 // THIS  MUST  BE  THIS  WAY
