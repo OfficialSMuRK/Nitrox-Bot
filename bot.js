@@ -46,7 +46,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '-youtube') {
-    	message.channel.reply('Youtube: https://www.youtube.com/user/TairicGames');
+    	message.reply('Youtube: https://www.youtube.com/user/TairicGames');
     }
     
 });
