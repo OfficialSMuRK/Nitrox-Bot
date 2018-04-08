@@ -13,18 +13,15 @@ client.on('message', message => {
 
 client.on('guildDelete', guild => {
     console.log(`I have left ${guild.name} at ${new Date()}`);
-
 });
 
 client.on('guildCreate', guild => {
     guild.defaultChannel.sendMessage(`I have joined ${guild.name}`);
-
 });
 
 client.on('guildMemberAdd', member => {
     let guild = member.guild;
-    guild.defaultChannel.message.send(`Welcome ${member.user} to the Nitrox Hub Discord Server!`)
-
+    guild.defaultChannel.sendMessage(`Welcome ${member.user} to the Nitrox Hub Discord Server!`)
 });
       
 client.on('message', message => {
@@ -34,8 +31,7 @@ client.on('message', message => {
         message.channel.send('Twitter: <https://twitter.com/NitroxOfficial>');
         message.channel.send('Youtube: <https://www.youtube.com/user/TairicGames>');
         message.channel.send('Patreon: <https://www.patreon.com/NITROXAC>');
-  	}
-    
+  	}   
 });
 
 // THIS  MUST  BE  THIS  WAY
