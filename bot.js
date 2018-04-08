@@ -26,12 +26,6 @@ client.on('guildMemberAdd', member => {
     guild.defaultChannel.sendMessage(`Welcome ${member.user} to the Nitrox Hub Discord Server!`);
 
 });
-
-client.on('guildMemberRemove', member => {
-    let guild = member.guild;
-    guild.defaultChannel.sendMessage(`${member.user} has left the server.`);
-
-});
       
 client.on('message', message => {
     if (message.content === '-nitrox') {
