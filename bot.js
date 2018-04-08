@@ -23,7 +23,7 @@ client.on('guildCreate', guild => {
 
 client.on('guildMemberAdd', member => {
     let guild = member.guild;
-    guild.defaultChannel.sendMessage(`Welcome ${member.user.username} to ${guild.name}`);
+    guild.defaultChannel.sendMessage(`Welcome ${member.user} to ${guild.name}`);
 
 });
       
