@@ -17,7 +17,7 @@ client.on('guildDelete', guild=> {
 });
 
 client.on('guildCreate', guild=> {
-    guild.defaultChannel.sendMessage(`I'm now online at ${guild.name}`);
+    guild.defaultChannel.sendMessage(`I am now online at ${guild.name}`);
     
 });
     
