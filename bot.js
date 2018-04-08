@@ -26,6 +26,12 @@ client.on('guildMemberAdd', member => {
     guild.defaultChannel.sendMessage(`Welcome ${member.user} to the ${guild.name}`);
 
 });
+
+client.on('guildMemberRemove', member => {
+    let guild = member.guild;
+    guild.defaultChannel.sendMessage(`${member.user} has left the ${guild.name}`);
+
+});
       
 client.on('message', message => {
     if (message.content === '-nitrox') {
