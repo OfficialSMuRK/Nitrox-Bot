@@ -11,17 +11,12 @@ client.on('message', message => {
   	}
 });
 
-client.on('guildDelete', guild => {
-    console.log(`I have left ${guild.name} at ${new Date()}`);
+client.on("guildCreate", (guild) => {
+    console.log(client.user + " was invited to and joined " + guild.name);
 });
 
-client.on('guildCreate', guild => {
-    guild.defaultChannel.sendMessage(`I have joined ${guild.name}`);
-});
-
-client.on('guildMemberAdd', member => {
-  let guild = member.guild;
-  guild.defaultChannel.sendMessage(`${member.user.username} has joined the Nitrox Hub Discord Server!`);
+client.on("guildMemberAdd", (guild, member) => {
+    console.log(member.user.username + " joined " + guild.name);
 });
 
 client.on('guildMemberRemove', member => {
