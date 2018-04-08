@@ -20,13 +20,13 @@ client.on('guildCreate', guild => {
 });
 
 client.on('guildMemberAdd', member => {
-    let guild = member.guild;
-    guild.defaultChannel.sendMessage(`Welcome ${member.user} to the Nitrox Hub Discord Server!`)
+  let guild = member.guild;
+  guild.defaultChannel.sendMessage(`${member.user.username} has joined the Nitrox Hub Discord Server!`);
 });
 
 client.on('guildMemberRemove', member => {
-    let guild = member.guild;
-    guild.defaultChannel.sendMessage(`${member.user} has left Nitrox Hub Discord Server!`)
+  let guild = member.guild;
+  guild.defaultChannel.sendMessage(`${member.user.username} has left the server.`);
 });
       
 client.on('message', message => {
