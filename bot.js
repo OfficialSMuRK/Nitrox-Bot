@@ -50,6 +50,27 @@ client.on('message', message => {
     }
     
 });
+   
+client.on('message', message => {
+    if (message.content === '-website') {
+    	message.reply('Website: https://nitrocga.org');
+    }
     
+});
+
+client.on('message', message => {
+    if (message.content === '-twitter') {
+    	message.reply('Twitter: https://twitter.com/NitroxOfficial');
+    }
+    
+});
+
+client.on('message', message => {
+    if (message.content === '-patreon') {
+    	message.reply('Patreon: https://www.patreon.com/NITROXAC');
+    }
+    
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
