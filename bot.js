@@ -20,12 +20,6 @@ client.on('guildCreate', guild => {
     guild.defaultChannel.sendMessage(`I have joined ${guild.name}`);
 
 });
-
-client.on('guildMemberAdd', member => {
-    let guild = member.guild;
-    guild.defaultChannel.sendMessage(`Welcome ${member.user} to the Nitrox Hub Discord Server!`);
-
-});
       
 client.on('message', message => {
     if (message.content === '-nitrox') {
