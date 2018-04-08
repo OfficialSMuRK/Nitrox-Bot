@@ -18,11 +18,6 @@ client.on("guildCreate", (guild) => {
 client.on("guildMemberAdd", (guild, member) => {
     console.log(member.user.username + " joined " + guild.name);
 });
-
-client.on('guildMemberRemove', member => {
-  let guild = member.guild;
-  guild.defaultChannel.sendMessage(`${member.user.username} has left the server.`);
-});
       
 client.on('message', message => {
     if (message.content === '-nitrox') {
