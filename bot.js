@@ -11,6 +11,11 @@ client.on('message', message => {
   	}
 });
 
+client.on('guildDelete', guild =>{
+    console.log(`I have left ${guild.name} at ${new Date()}`);
+
+});
+    
 client.on('message', message => {
     if (message.content === '-nitrox') {
     	message.channel.send('Check out Nitrox!');
