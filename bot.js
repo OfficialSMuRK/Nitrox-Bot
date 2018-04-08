@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
 client.on('ready', () => {
-  console.log('I\'m Online\nI\'m Online');
+  console.log('I am Online. I am Online');
 });
 
 client.on('message', message => {
