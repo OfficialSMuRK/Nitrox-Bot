@@ -16,8 +16,14 @@ client.on('guildDelete', guild => {
 
 });
 
-client.on(`guildCreate`, guild => {
+client.on('guildCreate', guild => {
     guild.defaultChannel.sendMessage(`I have joined ${guild.name}`);
+
+});
+
+client.on('guildMemberAdd', member => {
+    let guild = member.guild;
+    guild.defaultChannel.sendMessage(`Welcome ${member.user.username} to ${guild.name}`);
 
 });
       
