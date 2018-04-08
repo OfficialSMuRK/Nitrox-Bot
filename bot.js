@@ -16,7 +16,7 @@ client.on("guildCreate", (guild) => {
 });
 
 client.on("guildMemberAdd", (guild, member) => {
-    console.log(member.user + " joined " + guild.name);
+    console.log(member.user.username + " joined " + guild.name);
 });
 
 client.on('guildMemberRemove', member => {
