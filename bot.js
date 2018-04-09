@@ -11,7 +11,6 @@ client.on('message', message => {
         message.channel.send('Website: <https://nitrocga.org>');
         message.channel.send('Twitter: <https://twitter.com/NitroxOfficial>');
         message.channel.send('Youtube: <https://www.youtube.com/user/TairicGames>');
-        message.channel.send('Patreon: <https://www.patreon.com/NITROXAC>');
   	}   
 });
 
